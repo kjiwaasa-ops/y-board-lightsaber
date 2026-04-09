@@ -20,6 +20,7 @@ int need_to_erase = 0;
 bool lastButton1State = false;
 bool lastButton2State = false;
 bool lastButton3State = false;
+int last_knob_value = 0;
 unsigned long lastSwingTime = 0;
 const int swingCooldown = 300; // milliseconds
 
@@ -118,4 +119,10 @@ void loop() {
   }
   lastButton3State = current3;
 
+  int knob_reading_current = Yboard.get_knob();
+
+  if (knob_reading_current != last_knob_value) {
+    Yboard.play_sound_file("spinning_sabers.mp3");
+  }
+  last_knob_value = knob_reading_current;
 }
