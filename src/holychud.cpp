@@ -108,13 +108,13 @@ void loop() {
 
   bool current2 = Yboard.get_button(2);
   if (current2 && !lastButton2State) {
-    Yboard.play_sound_file("tony-stark-was-able-to-build-this-in-a-cave!-with-a-box-of-scraps!.mp3");
+    Yboard.play_sound_file("lightsaber_sounds/tony-stark-was-able-to-build-this-in-a-cave!-with-a-box-of-scraps!.mp3");
   }
   lastButton2State = current2;
 
   bool current3 = Yboard.get_button(3);
   if (current3 && !lastButton3State) {
-    Yboard.play_sound_file("fahhhhh-3.mp3");
+    Yboard.play_sound_file("lightsaber_sounds/fahhhhh-3.mp3");
   }
   lastButton3State = current3;
 
