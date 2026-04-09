@@ -104,6 +104,7 @@ void loop() {
       }
 
       Yboard.set_all_leds_color(red, green, blue);
+      Yboard.play_sound_file("lightsaber_sounds/lightsaber_start.mp3");
   }
   lastButton1State = current1;
 
@@ -122,7 +123,7 @@ void loop() {
   int knob_reading_current = Yboard.get_knob();
 
   if (knob_reading_current != last_knob_value) {
-    Yboard.play_sound_file("spinning_sabers.mp3");
+    Yboard.play_sound_file("lightsaber_sounds/spinning_sabers.mp3");
   }
   last_knob_value = knob_reading_current;
 }
